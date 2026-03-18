@@ -1,49 +1,72 @@
 # **auto XANES Fitting**
 
 
-## **Overview**
+For further details, you are encouraged to consult our [paper](https://) and visit our [website](https://) for additional resources and also our [dataset](https://) information.
 
-Modern materials research generates an enormous volume of textual data in the form of scientific papers, reports, and supplementary information. However, much of this knowledge remains locked in unstructured formats, limiting its direct use in data-driven modeling and machine-learning workflows.
+## **Installation**
 
-**MatDataMiner** aims to address this challenge by providing a unified framework for **materials-oriented literature mining**, enabling automated extraction of key information such as material compositions, synthesis conditions, structures, properties, and performance metrics from published papers.
+### Development Environment
+- Python 3.12
+- Google Gemini API
+- Validated on Windows OS
+- Use `conda env create -f litminer.yml` to create the enviornment.
 
-## **Key Features**
+### Setup
+To set up the codes, run the following commands:
 
-- **Topic-oriented text-mining pipelines**  
-  Each submodule is designed for a specific materials-science task (e.g., catalysis, energy materials, functional oxides), allowing flexible extension to new research domains.
+```bash
+git clone https://github.com/ai4cat/AI4C-LitMiner.git
+cd AI4C-LitMiner
+```
 
-- **PDF-based literature corpus**  
-  The repository supports curated paper libraries in **PDF format**, serving as the primary data source for large-scale literature analysis.
+## Data Availability & Copyright Notice
 
-- **Large Language Model (LLM)–assisted extraction**  
-  Text mining is powered by existing large language models, with a current focus on **Google Gemini**, to enable semantic-level understanding beyond traditional rule-based or keyword-based methods.
+The dataset used in this project is NOT publicly distributed due to copyright and licensing restrictions. The input data consist of published scientific articles, which are typically protected by publisher copyright and accessible only through institutional subscriptions or paid access.
 
-- **Prompt-engineering-driven workflows**  
-  Carefully designed **prompt-engineering strategies** are used to guide LLMs in performing structured information extraction, entity recognition, and relation parsing tailored to materials-science contexts.
+As a result:
 
-## **Design Philosophy**
+❌ We do not provide raw PDF/DOCX files
 
-Rather than training domain-specific models from scratch, **MatDataMiner** emphasizes the effective utilization of **state-of-the-art general LLMs** through domain-aware prompts and task-specific pipelines. This approach enables rapid adaptation to emerging research topics while maintaining high interpretability and reproducibility.
+❌ We do not redistribute full-text literature
 
+Users are required to obtain the relevant publications through legal and authorized channels (e.g., institutional access, publisher purchase).
 
-## **Intended Applications**
+This repository only provides:
 
-- Construction of **materials databases** for data-driven discovery  
-- Automated curation of literature for **machine-learning and AI models**  
-- Large-scale meta-analysis of published experimental and computational results  
-- Integration with downstream workflows such as catalyst screening and materials informatics
+✅ Code for data extraction
 
+✅ Prompt design and schema definitions
+
+✅ Example structured outputs (non-copyrighted)
 
 ## **Repository Structure**
 
-( to be modified... not comfirmed...)
 ```text
-MatDataMiner/
-├── ORR/               # PDF literature collections
-├── prompts/           # Prompt templates for LLM-based extraction
-├── pipelines/         # Task-specific text-mining workflows
-├── utils/             # Common utilities (PDF parsing, cleaning, logging)
-└── examples/          # Demonstration scripts and notebooks
+AI4C-LitMiner/
+├── code/
+├──── sys_method_extract.py     # Extract the sysnthesis methods
+├──── info_extract/             
+├─────── config.py              # Configurations
+├─────── main.py                # Task-specific text-mining workflows
+├─────── processor.py           # Perform the task            
+├─────── prompt.py              # Prompt templates for LLM-based extraction
+├─────── utils.py               # Common utilities (PDF parsing, cleaning, logging)
+└──── result/                 
+```
+
+## Contributing
+Contributions are welcome! Please follow the standard fork-and-pull request workflow on GitHub.
+
+If you use our code in your research, please cite our paper:
+```bash
+@article{,
+  title={s},
+  author={},
+  journal={},
+  year={},
+  volume = {},
+  pages = {}
+}
 ```
 
 ## **License**
@@ -52,4 +75,5 @@ MatDataMiner/
 
 This license permits use, modification, distribution, and commercial application of the code, while providing explicit patent protection for both contributors and users. It is particularly suitable for research-oriented software and AI-driven data-mining workflows.
 
-For the full license text, please refer to the [Apache-2.0 license](https://github.com/yichun77/MatDataMiner/blob/main/LICENSE) file.
+For the full license text, please refer to the [Apache-2.0 license](https://github.com/ai4cat/XASFit/blob/main/LICENSE) file.
+
