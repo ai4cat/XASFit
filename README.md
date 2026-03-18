@@ -1,7 +1,5 @@
-# **MatDataMiner**
+# **auto XANES Fitting**
 
-**MatDataMiner** is a modular and extensible repository designed for **text mining and information extraction in materials science**.  
-The repository hosts a collection of text-mining codes tailored to different materials-science topics, with the goal of systematically transforming unstructured scientific literature into structured, machine-readable data.
 
 ## **Overview**
 
