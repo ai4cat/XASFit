@@ -1,57 +1,52 @@
-# **auto XANES Fitting**
+# **XANESFit-Screen: Automated XANES Peak Fitting and FEFF10-Based Configuration Screening**
 
+An automated Python workflow for XANES spectral analysis, peak fitting, and structure screening by combining experimental spectra with FEFF10-simulated references.
+
+This repository provides a reproducible pipeline for:
+
+- automated peak detection in experimental XANES spectra,
+- Gaussian/Voigt-based spectral fitting,
+- descriptor extraction from fitted spectra,
+- comparison between experimental and FEFF10-simulated spectra,
+- ranking and screening of candidate local configurations.
+
+The workflow is designed to accelerate XANES interpretation while reducing manual intervention in peak assignment and spectrum matching.
 
 For further details, you are encouraged to consult our [paper](https://) and visit our [website](https://) for additional resources and also our [dataset](https://) information.
 
 ## **Installation**
 
 ### Development Environment
-- Python 3.12
-- Google Gemini API
-- Validated on Windows OS
-- Use `conda env create -f litminer.yml` to create the enviornment.
+- Python 3.13
+- Validated on Linux OS
+- Use `conda env create -f xasfit.yml` to create the enviornment.
 
 ### Setup
 To set up the codes, run the following commands:
 
 ```bash
-git clone https://github.com/ai4cat/AI4C-LitMiner.git
-cd AI4C-LitMiner
+git clone https://github.com/ai4cat/XASFit.git
+cd XASFit
 ```
 
 ## Data Availability & Copyright Notice
 
-The dataset used in this project is NOT publicly distributed due to copyright and licensing restrictions. The input data consist of published scientific articles, which are typically protected by publisher copyright and accessible only through institutional subscriptions or paid access.
+The experimental XANES spectra used in this project were obtained through in-house measurements conducted within our research group. The corresponding atomic configurations and theoretical models were independently constructed as part of our internal database development.
 
-As a result:
+Due to data ownership and ongoing research considerations, the full dataset (including experimental spectra and computed structural configurations) is not publicly distributed within this repository.
 
-❌ We do not provide raw PDF/DOCX files
+Interested users may access relevant data and explore the curated database through our official platform:
 
-❌ We do not redistribute full-text literature
+👉 [Open-ADC](https://)
 
-Users are required to obtain the relevant publications through legal and authorized channels (e.g., institutional access, publisher purchase).
-
-This repository only provides:
-
-✅ Code for data extraction
-
-✅ Prompt design and schema definitions
-
-✅ Example structured outputs (non-copyrighted)
+For specific requests or collaborations, please feel free to contact us.
 
 ## **Repository Structure**
 
 ```text
-AI4C-LitMiner/
-├── code/
-├──── sys_method_extract.py     # Extract the sysnthesis methods
-├──── info_extract/             
-├─────── config.py              # Configurations
-├─────── main.py                # Task-specific text-mining workflows
-├─────── processor.py           # Perform the task            
-├─────── prompt.py              # Prompt templates for LLM-based extraction
-├─────── utils.py               # Common utilities (PDF parsing, cleaning, logging)
-└──── result/                 
+XASFit/
+├── fitting/
+└── pre-process/                        
 ```
 
 ## Contributing
@@ -71,9 +66,9 @@ If you use our code in your research, please cite our paper:
 
 ## **License**
 
-**MatDataMiner** is released under the **Apache License 2.0**.
+This project is released under the **Apache License 2.0**.
 
-This license permits use, modification, distribution, and commercial application of the code, while providing explicit patent protection for both contributors and users. It is particularly suitable for research-oriented software and AI-driven data-mining workflows.
+This license permits use, modification, distribution, and commercial application of the code, while providing explicit patent protection for both contributors and users. It is particularly suitable for research-oriented software and AI-driven workflows.
 
 For the full license text, please refer to the [Apache-2.0 license](https://github.com/ai4cat/XASFit/blob/main/LICENSE) file.
 
