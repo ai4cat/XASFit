@@ -12,7 +12,7 @@ This repository provides a reproducible pipeline for:
 
 The workflow is designed to accelerate XANES interpretation while reducing manual intervention in peak assignment and spectrum matching.
 
-For further details, you are encouraged to consult our [paper](https://) and visit our [website](https://) for additional resources and also our [dataset](https://) information.
+For further details, you are encouraged to consult our [paper](https://) and visit our [website](https://) for additional resources and also our [dataset](http://openadc.com.cn:23345/) information.
 
 ## **Installation**
 
@@ -37,7 +37,7 @@ Due to data ownership and ongoing research considerations, the full dataset (inc
 
 Interested users may access relevant data and explore the curated database through our official platform:
 
-👉 [Open-ADC](https://)
+👉 [Open-ADC](http://openadc.com.cn:23345/)
 
 For specific requests or collaborations, please feel free to contact us.
 
@@ -66,9 +66,5 @@ If you use our code in your research, please cite our paper:
 
 ## **License**
 
-This project is released under the **Apache License 2.0**.
-
-This license permits use, modification, distribution, and commercial application of the code, while providing explicit patent protection for both contributors and users. It is particularly suitable for research-oriented software and AI-driven workflows.
-
-For the full license text, please refer to the [Apache-2.0 license](https://github.com/ai4cat/XASFit/blob/main/LICENSE) file.
+This project is licensed under the [CC-BY-ND-NC License](https://github.com/ai4cat/XASFit/blob/main/LICENSE). Please see the LICENSE file for more details.
 
